@@ -1,0 +1,34 @@
+<div class="ba mt3" th:fragment="journeySummary">
+    <ul class="list pl0 flex mv0">
+        <li class="w-40">
+            <div class="pa3">
+                <a href="" class="govuk-heading-m govuk-link">Total moves by journey</a>
+            </div>
+        </li>
+        <li class="flex-auto bl">
+            <div class="pa3">
+                <p class="govuk-heading-l mb1" th:text="${journeySummary.movesWithoutPrices}">33</p>
+                <div>
+                    <p class="govuk-body mv0">Without prices</p>
+                </div>
+            </div>
+
+        </li>
+        <li class="flex-auto bl">
+            <div class="pa3">
+                <p class="govuk-heading-l mb1" th:text="${journeySummary.movesWithoutLocations}">12</p>
+                <div>
+                    <p class="govuk-body mv0">Without locations</p>
+                </div>
+            </div>
+        </li>
+        <li class="flex-auto bl">
+            <div class="pa3">
+                <p class="govuk-heading-l mb1" th:text="${journeySummary.totalUniqueJourneys}">857</p>
+                <div>
+                    <p class="govuk-body mv0">Total unique journeys</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

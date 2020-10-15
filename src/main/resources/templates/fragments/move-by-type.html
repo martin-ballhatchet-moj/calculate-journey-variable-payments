@@ -1,0 +1,45 @@
+<div th:fragment="move">
+    <div class="ba">
+        <ul class="list pl0 flex mv0">
+            <li class="flex-auto">
+                <div class="pa3">
+                    <a href="" class="govuk-heading-m govuk-link" th:text="${move.type}">Standard</a>
+                </div>
+            </li>
+            <li class="w-20 bl">
+                <div class="pa3">
+                    <p class="govuk-heading-l mb1" th:inline="text">[[${#numbers.formatDecimal(move.percentage, 0, 'COMMA', 0, 'POINT')}]]</p>
+                    <div>
+                        <p class="govuk-body mv0">Percentage</p>
+                    </div>
+                </div>
+            </li>
+            <li class="w-20 bl">
+                <div class="pa3">
+                    <p class="govuk-heading-l mb1" th:inline="text">[[${#numbers.formatDecimal(move.withoutPrices, 0, 'COMMA', 0, 'POINT')}]]</p>
+                    <div>
+                        <p class="govuk-body mv0">Without prices</p>
+                    </div>
+                </div>
+            </li>
+            <li class="w-20 bl">
+                <div class="pa3">
+                    <p class="govuk-heading-l mb1" th:inline="text">[[${#numbers.formatDecimal(move.total, 0, 'COMMA', 0, 'POINT')}]]</p>
+                    <div>
+                        <p class="govuk-body mv0">Total moves</p>
+                    </div>
+                </div>
+            </li>
+            <li class="w-20 bl">
+                <div class="h-100 ba b--red border-box bw2">
+                    <div class="pa3">
+                        <p class="govuk-heading-l mb1" th:inline="text">£[[${#numbers.formatDecimal(move.pendingPrice, 0, 'COMMA', 2, 'POINT')}]]</p>
+                        <div>
+                            <p class="govuk-body mv0">Pending price</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

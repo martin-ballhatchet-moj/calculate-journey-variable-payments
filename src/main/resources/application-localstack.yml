@@ -18,3 +18,7 @@ import-files:
 
 export-files:
   template: classpath:/spreadsheets/JPC_template.xlsx
+
+spring:
+  thymeleaf:
+    cache: false
